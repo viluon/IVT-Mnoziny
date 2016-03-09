@@ -14,4 +14,17 @@ public class Prvek
 	{
 		return this.dalsiPrvek;
 	}
+
+	public void setDalsiPrvek( Prvek p )
+	{
+		this.dalsiPrvek = p;
+	}
+
+	// WARN: Mimo zadani: Prida novy Prvek do rady *za* this Prvek
+	public void pridejPrvek( int h )
+	{
+		Prvek p = new Prvek( h );
+		p.setDalsiPrvek( this.dalsiPrvek );
+		this.dalsiPrvek = p;
+	}
 }
